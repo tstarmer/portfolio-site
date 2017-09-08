@@ -1,0 +1,300 @@
+/*Reset*/
+*{
+	box-sizing: border-box;
+}
+
+ul{
+	padding: 0;
+  margin:0;
+}
+ul li{
+	list-style: none;
+}
+a, a:visited{
+	text-decoration: none;
+	color: black;
+}
+
+a:visited{
+	 color: inherit;
+}
+
+/*End Reset*/
+
+/*Typography*/
+html{
+	font-size: 14px
+}
+
+body{
+
+	font-family: 'Merriweather', calibri, serif;
+	font-size: 1rem;	
+}
+
+h1,h2,h3,h4,h5,h6{
+
+	font-family:  'Open Sans', Cambria, sans-serif;
+}
+
+h1{
+	font-size:1.5rem;
+	color:rgb(54,95,145);
+	margin-top:0;
+}
+h2{
+	font-size: 1.25rem;
+	color: rgb(69,119,159);
+}
+h3, h3 a{
+	font-size: 1.25rem;
+	line-height: 3rem;
+/* 	color: rgb(69,119,159); */
+  	font-weight: 800;
+	margin-top: .5rem;
+	margin-bottom: .25rem;
+/* 	background-color: rgba(40,40,40,0.15); */
+/* 	text-align: center; */
+/* 	padding-left:1rem; */
+	border-top:1.5px dashed gray;
+}
+h4, h4 a{
+	font-size: 1.1rem;
+	line-height: 1.1rem;
+	color: rgb(69,119,159);
+	margin-top: 1rem;
+	margin-bottom: .5rem;
+	
+}
+h5, h5 a{
+	font-size: 1.075rem;
+/* 	color: rgb(69,119,159); */
+  margin-top: .5rem;
+	margin-bottom: .5rem;
+}
+h6, h6 a{
+	font-size: 1.05rem;
+	line-height: 1.05rem;
+	margin: .5rem 0;
+	text-align: center;
+/* 	color: rgb(69,119,159); */
+}
+
+p{
+	margin:.5rem 0;
+	line-height: 1.5rem;
+}
+/* Lists */
+#Skills ul{
+	/*! padding-left:1rem; */
+}
+
+.col-3{
+	text-align: right;
+}
+
+/*End Typography*/
+
+/*Layout*/
+
+#body{
+	clear:both;
+}
+
+.page{
+	width: 8.5in;
+	height:10.85in;
+	margin:0 auto;
+	padding: 1in 1in;
+/*   border:1px solid; */
+	clear:both;
+	overflow:hidden;
+}
+
+
+.col-3{
+	width: 25%;
+	float: left;
+}
+
+.col-9{
+	width: 75%;
+	float: left;
+
+}
+
+/*End layout*/
+
+/* Blocks */
+
+#contact li {
+	margin-top: .35rem;
+	float: right;
+}
+#contact li:last-of-type{
+	margin-bottom: .35rem;
+}
+
+#About, #certificates, #Edu, #projects, #Skills, #publications, #prior-work{
+	clear: both;
+}
+
+#About:after, #certificates:after, #Edu:after, #projects:after, #Skills:after, #publications:after, #prior-work:after{
+	content:"";
+	display:table;
+  	clear:both;
+	font-size: 0;
+}
+
+#About p{
+	padding-left: 1.5rem
+}
+
+#Edu{
+	padding-left: 1.5rem
+}
+#Edu h3{
+	margin-left: -1.5rem;
+}
+
+#Edu h4{
+	margin-bottom: .25rem;
+}
+
+#Edu p{
+	padding-left: 1.5rem;
+	margin: 0;
+}
+
+#Edu .year,
+#prior-work .year{
+	font-style: italic;
+	font-size: .95rem;
+	padding-right: 1.5rem;
+	float:right;
+}
+
+#Edu .degree{
+	padding-left: .5rem;
+}
+
+#Skills ul{
+	font-size: .95rem;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+#Skills li{
+	padding-left:.25rem;
+}
+
+#Skills li:after{
+	content: ", ";
+}
+
+#Skills li:last-of-type:after{
+	content:"";
+}
+
+.project, .certificate{
+	clear:both;
+	padding-left:.5rem;
+	
+}
+.certificate h4, .certificate h5{
+	text-align: center;
+}
+
+.certificate h5,
+.certificate h5 a{
+	font-style: italic;
+	font-size: .9rem;
+}
+
+.certificate h5 em{
+	font-size: .75rem;
+	color:rgb(10,10,10);
+}
+
+
+.certificate .col-10,
+.project .col-10{
+	padding: .5rem .75rem;
+}
+
+.project h4{
+	width:60%;
+	float: left;
+}
+.project h6{
+	width:40%;
+	float: left;
+}
+
+.project h6,
+.project h6 a{
+	text-align: right;
+	padding-right: .75rem;
+	font-size: .9rem;
+	line-height: 1.1rem;
+	margin-top: 1.1rem;
+	
+}
+
+.project p{
+	padding-left: 1.5rem;
+	clear:both;
+	padding-top: .75rem;
+	margin-bottom: .25rem
+}
+
+
+.project  ul{
+	font-size: .9rem;
+	font-style: italic;
+	text-align: left;
+	padding-left:1.5rem;
+	margin-top: .25rem;
+	display: inline-flex;
+}
+
+.project li{
+	margin-left:.15rem;
+}
+
+.project li:after{
+	content:", ";
+}
+.project li:first-of-type:after,
+.project li:last-of-type:after{
+	content: " ";
+}
+
+
+#prior-work h5{
+	padding-left: .5rem;
+}
+
+#prior-work ul{
+	padding-left:2rem;
+	
+}
+#prior-work li{
+	list-style: disc;
+}
+
+#publications{
+	
+	padding-left:1.5rem;
+}
+
+#publications h3{
+	margin-left:-1.5rem;
+	margin-bottom: .25rem;
+}
+#publications li {
+	font-size: .95rem;
+}
+
+/* End Blocks */
