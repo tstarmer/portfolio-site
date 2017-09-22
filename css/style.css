@@ -136,28 +136,19 @@ p{
 }
 
 .page{
-	height: auto;
+	/* height: auto; */
 	width: 90%;
 	min-width:320px;
 	max-width:8.5in;
 	margin:0 auto;
-	padding: 1in 10%;
-	/*   	border:1px solid; */
+	/* padding: 1in 10%; */
+	/* border:1px solid; */
 	clear:both;
 	/* 	overflow:hidden; */
 }
 
 
-.col-3{
-	width: 25%;
-	float: left;
-}
 
-.col-9{
-	width: 75%;
-	float: left;
-
-}
 
 /*End layout*/
 
@@ -165,7 +156,7 @@ p{
 
 #contact li {
 	margin-top: .35rem;
-	float: right;
+/* 	float: right; */
 }
 #contact li:last-of-type{
 	margin-bottom: .35rem;
@@ -297,13 +288,11 @@ p{
 	padding-left:1.5rem;
 	margin-top: .25rem;
 	display: inline-flex;
+	flex-wrap:wrap;
 	color:  #555;
 }
 
-.project li{
-/* 	margin-left:.15rem; */
-	margin-right:  .15rem;
-}
+.project li{/* 	margin-left:.15rem; */margin-right:  .15rem;}
 
 .project li:after{
 	content:", ";
@@ -344,14 +333,63 @@ p{
 
 @media (min-width:320px){
 	.page{
-		width:90%;
-		padding: 1in 10%;
+		width: 90%;
+		padding: 1in 2%;
 	}
+
+	.col-3,
+	.col-9{
+		width:100%;
+		clear:both;
+	}
+	
+	.project h4{
+		width:100%;
+		float: left;
+	}
+	.project h6{
+		width:100%;
+		float: left;
+	}
+
+	.project h6,
+	.project h6 a{
+		text-align: left;
+	}
+
+	
 }
 @media (min-width:768px){
 	.page{
-/* 		width:80%; */
-		padding: 1in 5%;
+		width:90%;
+		padding: 1in 2%; 
+	}
+
+	.col-3{
+		width: 25%;
+		float: left;
+		clear: none;
+	}
+
+	.col-9{
+		width: 75%;
+		float: left;
+		clear: none;
+
+	}
+
+	.project h4{
+		width:60%;
+		float: left;
+	}
+	.project h6{
+		width:40%;
+		float: left;
+	}
+
+	.project h6,
+	.project h6 a{
+		text-align: right;
 	}
 }
 
@@ -375,6 +413,5 @@ p{
 	#show-more{
 		display:none;
 	}
-
 
 }
