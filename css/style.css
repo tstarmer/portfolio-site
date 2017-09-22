@@ -3,6 +3,12 @@
 	box-sizing: border-box;
 }
 
+.row:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
 ul{
 	padding: 0;
   margin:0;
@@ -28,48 +34,68 @@ html{
 
 body{
 
-	font-family: 'Merriweather', calibri, serif;
+	font-family: 'Roboto', calibri, serif;
 	font-size: 1rem;	
 }
 
 h1,h2,h3,h4,h5,h6{
 
-	font-family:  'Open Sans', Cambria, sans-serif;
+	font-family:  'Roboto', Cambria, sans-serif;
 }
 
 h1{
-	font-size:1.5rem;
+	padding:  0px;
+	margin:  0px;
+	font-size:2rem;
+	line-height:  2rem;
 	color:rgb(54,95,145);
 	margin-top:0;
+	font-family: 'Merriweather', serif;
+	margin-bottom:  10px;
 }
 h2{
+	padding:  0px;
+	margin:  0px;
 	font-size: 1.25rem;
-	color: rgb(69,119,159);
+	line-height:  1.25rem;
+	/*color: rgb(69,119,159);*/
+	font-family: 'Merriweather', serif;
+	font-weight:  300;
 }
 h3, h3 a{
-	font-size: 1.25rem;
+	font-size: 1.1rem;
 	line-height: 3rem;
 /* 	color: rgb(69,119,159); */
   	font-weight: 800;
-	margin-top: .5rem;
+	margin-top: 1rem;
 	margin-bottom: .25rem;
 /* 	background-color: rgba(40,40,40,0.15); */
 /* 	text-align: center; */
 /* 	padding-left:1rem; */
-	border-top:1.5px dashed gray;
+	border-top:1px solid #aaa;
+	text-transform:  uppercase;
 }
 h4, h4 a{
+	font-family: 'Merriweather', serif;
+	font-weight:  400;
 	font-size: 1.1rem;
-	line-height: 1.1rem;
+	line-height: 1.3rem;
 	color: rgb(69,119,159);
 	margin-top: 1rem;
-	margin-bottom: .5rem;
+	margin-bottom: .15rem;
 	
 }
+
+h4 span {
+	font-style:  italic;
+	font-size:  0.9rem;
+	color:  #555;
+}
+
 h5, h5 a{
 	font-size: 1.075rem;
 /* 	color: rgb(69,119,159); */
-  margin-top: .5rem;
+ 	margin-top: .5rem;
 	margin-bottom: .5rem;
 }
 h6, h6 a{
@@ -95,6 +121,14 @@ p{
 
 /*End Typography*/
 
+.below-fold{
+/* 	display:none; */
+}
+
+#show-more{
+	display:none;
+}
+
 /*Layout*/
 
 #body{
@@ -102,13 +136,15 @@ p{
 }
 
 .page{
-	width: 8.5in;
-	height:10.85in;
+	height: auto;
+	width: 90%;
+	min-width:320px;
+	max-width:8.5in;
 	margin:0 auto;
-	padding: 1in 1in;
-/*   border:1px solid; */
+	padding: 1in 10%;
+	/*   	border:1px solid; */
 	clear:both;
-	overflow:hidden;
+	/* 	overflow:hidden; */
 }
 
 
@@ -170,7 +206,7 @@ p{
 #prior-work .year{
 	font-style: italic;
 	font-size: .95rem;
-	padding-right: 1.5rem;
+	/*padding-right: 1.5rem;*/
 	float:right;
 }
 
@@ -183,6 +219,8 @@ p{
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+	flex-wrap:wrap;
+	justify-content:center;
 }
 
 #Skills li{
@@ -203,7 +241,7 @@ p{
 	
 }
 .certificate h4, .certificate h5{
-	text-align: center;
+	text-align: left;
 }
 
 .certificate h5,
@@ -235,7 +273,7 @@ p{
 .project h6,
 .project h6 a{
 	text-align: right;
-	padding-right: .75rem;
+	/*padding-right: .75rem;*/
 	font-size: .9rem;
 	line-height: 1.1rem;
 	margin-top: 1.1rem;
@@ -251,16 +289,20 @@ p{
 
 
 .project  ul{
+	margin:  0px;
+	padding:  0px;
 	font-size: .9rem;
 	font-style: italic;
 	text-align: left;
 	padding-left:1.5rem;
 	margin-top: .25rem;
 	display: inline-flex;
+	color:  #555;
 }
 
 .project li{
-	margin-left:.15rem;
+/* 	margin-left:.15rem; */
+	margin-right:  .15rem;
 }
 
 .project li:after{
@@ -282,19 +324,57 @@ p{
 }
 #prior-work li{
 	list-style: disc;
+	margin-bottom:  .1rem;
 }
 
 #publications{
 	
-	padding-left:1.5rem;
+	padding-left:1.15rem;
 }
 
 #publications h3{
-	margin-left:-1.5rem;
+	margin-left:-1.15rem;
 	margin-bottom: .25rem;
 }
 #publications li {
-	font-size: .95rem;
+	font-size: .90rem;
 }
 
 /* End Blocks */
+
+@media (min-width:320px){
+	.page{
+		width:90%;
+		padding: 1in 10%;
+	}
+}
+@media (min-width:768px){
+	.page{
+/* 		width:80%; */
+		padding: 1in 5%;
+	}
+}
+
+
+@media only print{
+	.page{
+		width: 8.5in;
+		height:10.85in;
+		padding: 1in 1in;
+		overflow:hidden;
+	}
+
+	h3, h3 a{
+		line-height: 2.75rem;
+	}
+
+	.below-fold{
+		display:none;
+	}
+
+	#show-more{
+		display:none;
+	}
+
+
+}
